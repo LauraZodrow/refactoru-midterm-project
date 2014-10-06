@@ -1,0 +1,23 @@
+body {
+	background-color: #999;
+}
+
+.my-library {
+	display: none;
+	position: fixed;
+	top: 0px;
+	right: 10px;
+	opacity: .9;
+	background-color: #fff;
+}
+
+.btn-library {
+	position: fixed;
+	top: 0px;
+	right: 10px;
+	opacity: .9;
+	background-color: #666;
+	padding: 10px;
+	border: 2px solid #fff;
+	color: #fff;
+}
