@@ -9,7 +9,7 @@ Library.prototype.render = function() {
 
 	this.element 
 		.addClass('my-library')
-		.appendTo('body')
+		.appendTo('.container')
 		.append('<h4>' + this.title + '</h4>');
 
 	return this.element;
@@ -25,23 +25,28 @@ var Button = function() {
 Button.prototype.render = function() {
 	if(this.element) return this.element;
 
-	this.element = $('<div>My Library</div>');
+	this.element = $('<div><h4>My Library</h4></div>');
 
 	this.element 
 		.addClass('btn-library')
 		.appendTo('body');
 
+	this.element.on('click', function () {
+		$('.my-library').slideDown(600);
+		$('.btn-library').hide();
+	});	
+
+	$('.my-library').on('click', 'h4', function() {
+		$('.my-library').slideUp(600);
+		$('.btn-library').show();
+	})
+
 	return this.element;
 };
-
-Library.prototype = new Button();
-Library.prototype.constructor = Button;
 
 var btnLibrary = new Button('My Library');
 btnLibrary.render();
 
-Button.prototype.click = function() {
-	btnLibrary.on('click', function() {
-		myLibrary.show();
-	})
-};
+Button.prototype = new Library();
+Button.prototype.constructor = Button;
+

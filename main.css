@@ -1,5 +1,6 @@
 body {
 	background-color: #999;
+	font-family: 'Abel', sans-serif;
 }
 
 .my-library {
@@ -7,8 +8,20 @@ body {
 	position: fixed;
 	top: 0px;
 	right: 10px;
-	opacity: .9;
-	background-color: #fff;
+	opacity: .7;
+	background-color: #000;
+	color: #fff;
+	height: 40%;
+	width: 30%;
+	text-align: center;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h4 {
+	border-bottom: 1px solid #666;
+	padding-bottom: 5px;
 }
 
 .btn-library {
@@ -17,7 +30,19 @@ body {
 	right: 10px;
 	opacity: .9;
 	background-color: #666;
-	padding: 10px;
+	padding: 0px;
 	border: 2px solid #fff;
 	color: #fff;
+	text-align: center;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	width: 30%;
+}
+
+.media {
+	position: fixed;
+	top: 40%;
+	left: 10px;
+	opacity: .5;
 }
