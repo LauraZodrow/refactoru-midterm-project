@@ -146,22 +146,18 @@ Location.prototype.render = function() {
 };
 
 Location.prototype.markerclick = function(e) {
-	console.log('clicked', this)
+	console.log('clicked', this);
+	this.element = $('<div>Add to TravelLine</div>');
+
+	this.element
+		.addClass('addButton')
+		.appendTo(this.marker); //needs to be a dom element
+
+	return this.element;
 };
 
-// Location.prototype.render = function() {
-// 	this.marker.on('click', function(){
-// 		this.element = $('<div>Add to TravelLine</div>');
-
-// 		this.element
-// 			.addClass('addButton')
-// 			.appendTo(this.marker);
-// 	})
-// 	return this.element;
-// };
-
-// var addToTimeline = new Location();
-// addToTimeline.render();
+var addToTimeline = new Location();
+addToTimeline.render();
 
 
 // =================================================
