@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	 <meta charset="utf-8">
+ 	 <title>Rome, Italy</title>
+  	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	
+	<div class="container">
+		<nav class="row main-nav">
+			<ul>
+				<li class= "col-md-2">Schools</li>
+				<li class= "col-md-2">Restaurants</li>
+				<li class= "col-md-2">Hostels</li>
+				<li class= "col-md-2">Museums</li>
+				<li class= "col-md-2">Pubs</li>
+				<li><div class="col-md-2 my-library"><h4>My Library</h4></div></li>
+			</ul>
+		</nav>
+
+		<div class="cityName"><h2>Rome, Italy</h2></div>
+		
+		<div id="map-canvas"></div>
+		<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+
+		
+		<div class="timeline">Timeline Here</div>
+		
+
+		<!-- UPLOAD PHOTOS AND VIDEOS TO CITY TIMELINE -->
+		<div class = "row">
+			<div class="col-md-1 photoThumbnails">
+				<i class="fa fa-th-large"></i>
+				Thumbnails
+			</div>
+			<div id="photoLibrary" class="col-md-5 carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				 <ol class="carousel-indicators">
+	    			<li data-target="#photoLibrary" data-slide-to="0" class="active"></li>
+	    			<li data-target="#photoLibrary" data-slide-to="1"></li>
+	    			<li data-target="#photoLibrary" data-slide-to="2"></li>
+	   				<!-- <li data-target="#photoLibrary" data-slide-to="2"></li> -->
+	 			</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+			    	<div class="item active">
+			      		<img src="./images/rome0.jpg" alt="Venice, Italy">
+			    	</div>
+			    	<div class="item">
+			      		<img src="./images/rome1.jpg" alt="Venice">
+			   		</div>
+			   		<div class="item">
+			      		<img src="./images/rome2.jpg" alt="Venice">
+			   		</div>
+				</div>
+				<!-- Controls -->
+				<a class="left carousel-control" href="#photoLibrary" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#photoLibrary" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+
+		
+			<div class="video col-md-5">
+				<img src="./images/video-image.jpg">	
+			</div>
+			<div class="col-md-1 videoThumbnails">
+				<i class="fa fa-th-large"></i>
+				Thumbnails
+			</div>		
+
+		</div>
+
+		<!-- CUSTOM SOCIAL BOARD -->
+		<div class="bookmarkBoard">
+			<div class="row">
+				<div class="col-md-4 schools">
+					<h4>Schools</h4>
+					<div class = "userInputSchool">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni iste adipisci pariatur temporibus, numquam!</p>
+						<p><em>-John</em></p>
+					</div>
+				</div>
+				<div class="col-md-4 restaurants">
+					<h4>Restaurants</h4>
+					<div class = "userInputRestaurants">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni iste adipisci pariatur temporibus, numquam!</p>
+						<p><em>-John</em></p>
+					</div>
+				</div>
+				<div class="col-md-4 hostels">
+					<h4>Hostels</h4>
+					<div class = "userInputHostels">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni iste adipisci pariatur temporibus, numquam!</p>
+						<p><em>-John</em></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 museums">
+					<h4>Museums</h4>
+					<div class = "userInputMuseums">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni iste adipisci pariatur temporibus, numquam!</p>
+						<p><em>-John</em></p>
+					</div>
+				</div>
+				<div class="col-md-4 pubs">
+					<h4>Pubs</h4>
+					<div class = "userInputPubs">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni iste adipisci pariatur temporibus, numquam!</p>
+						<p><em>-John</em></p>
+					</div>
+				</div>
+				<div class="col-md-4 createOwn">
+					<h4>Add</h4>
+					<textarea></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="main.js"></script>
+
+</body>
+</html>

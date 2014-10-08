@@ -1,0 +1,56 @@
+body {
+	background-color: #999;
+	font-family: 'Abel', sans-serif;
+}
+
+img { 
+	max-width: 100%;
+}
+
+.my-library {
+	display: none;
+	position: fixed;
+	top: 0px;
+	right: 20px;
+	opacity: .7;
+	background-color: #000;
+	color: #fff;
+	height: 100%;
+	width: 30%;
+	text-align: center;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.photos {
+	z-index: 100;
+}
+
+h4 {
+	border-bottom: 1px solid #666;
+	padding-bottom: 5px;
+}
+
+.btn-library {
+	position: fixed;
+	top: 0px;
+	right: 10px;
+	opacity: .9;
+	background-color: #666;
+	padding: 0px;
+	border: 2px solid #fff;
+	color: #fff;
+	text-align: center;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	width: 30%;
+}
+
+.media {
+	position: fixed;
+	top: 40%;
+	left: 10px;
+	opacity: .5;
+}
