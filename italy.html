@@ -11,55 +11,89 @@
 <body>
 	
 	<div class="container">
-		<nav class="row main-nav">
-			<ul>
-				<li class= "col-md-2">Schools</li>
-				<li class= "col-md-2">Restaurants</li>
-				<li class= "col-md-2">Hostels</li>
-				<li class= "col-md-2">Museums</li>
-				<li class= "col-md-2">Pubs</li>
-				<li><div class="col-md-2 my-library"><h4>My Library</h4></div></li>
-			</ul>
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		     <!--  <a class="navbar-brand" href="#">Brand</a> -->
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="#">Schools</a></li>
+		        <li><a href="#">Restaurants</a></li>
+		        <li><a href="#">Hostels</a></li>
+		        <li><a href="#">Museums</a></li>
+		        <li><a href="#">Pubs</a></li>
+		      </ul>
+			<ul class="nav navbar-nav navbar-right">
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Library <span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a href="#">Rome, Itlay</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">WHERE I WANT TO VISIT</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">Mumbai, India</a></li>
+		            <li><a href="#">Lisbon, Portugal</a></li>
+		          </ul>
+		        </li>
+	      	</ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
 		</nav>
 
-		<div class="cityName"><h2>Rome, Italy</h2></div>
 		
 		<div id="map-canvas"></div>
 		<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+
+		<div class="cityName"><h2>Rome, Italy</h2></div>
+		<!-- <div class="storeTimeline"><img src="./images/timeline-image.png"></div> -->
 		
 		<!-- Button trigger modal -->
-		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		<button class="btn btn-primary btn-lg modalButton" data-toggle="modal" data-target="#myModal">
 		  Add to Timeline
 		</button>
 
-		<!-- MODAL -->
-		<div class="modal fade">
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <!-- <h4 class="modal-title" id="myModalLabel">Add to Timeline</h4> -->
 		      </div>
 		      <div class="modal-body">
-		        <p>Do you want to add this to your Timeline?</p>
+		        Add to Timeline
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Add</button>
+		        <button type="button" class="btn btn-primary addButton">Add</button>
 		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+		    </div>
+		  </div>
+		</div>
 
 		
-		<div class="timeline">Timeline Here</div>
+		<div class="timelineContainer">
+		</div>
 		
 
 		<!-- UPLOAD PHOTOS AND VIDEOS TO CITY TIMELINE -->
 		<div class = "row">
-			<div class="col-md-1 photoThumbnails">
-				<i class="fa fa-th-large"></i>
-				Thumbnails
+			<div class="photoButtons col-md-1">
+				<div class="btnViewAll">View All</div>
+				<div class="btnAdd">Add</div>
+				<div class="btnShare">Share</div>
 			</div>
+
 			<div id="photoLibrary" class="col-md-5 carousel slide" data-ride="carousel">
 				<!-- Indicators -->
 				 <ol class="carousel-indicators">
@@ -89,23 +123,34 @@
 				    <span class="glyphicon glyphicon-chevron-right"></span>
 				</a>
 			</div>
-
-		
+			
+			<!-- Video Library -->
 			<div class="video col-md-5">
 				<img src="./images/video-image.jpg">	
 			</div>
-			<div class="col-md-1 videoThumbnails">
-				<i class="fa fa-th-large"></i>
-				Thumbnails
-			</div>		
-
+			<div class="videoButtons col-md-1">
+				<div class="btnViewAll">View All</div>
+				<div class="btnAdd">Add</div>
+				<div class="btnShare">Share</div>
+			</div>
 		</div>
 
 		<!-- CUSTOM SOCIAL BOARD -->
 		<div class="bookmarkBoard">
+			<div class="addBtnBoard">
+				<ul>
+					<h4>Add a Board</h4>
+					<li class="addSchools">Schools</li>
+					<li class="addRestaurants">Restaurants</li>
+					<li class="addHostels">Hostels</li>
+					<li class="addMuseums">Museums</li>
+					<li class="addPubs">Pubs</li>
+				</ul>
+			</div>
 			<div class="row">
 				<div class="col-md-4">
 					<div class="schools">
+						<div class="btnBoard btnBoardSchool"><i class="fa fa-times"></i></div>
 						<h4>Schools</h4>
 						<div class = "userInputSchool">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni iste adipisci pariatur temporibus, numquam!</p>
@@ -115,6 +160,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="restaurants">
+						<div class="btnBoard btnBoardRestaurants"><i class="fa fa-times"></i></div>
 						<h4>Restaurants</h4>
 						<div class = "userInputRestaurants">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni iste adipisci pariatur temporibus, numquam!</p>
@@ -124,6 +170,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="hostels">
+						<div class="btnBoard btnBoardHostels"><i class="fa fa-times"></i></div>
 						<h4>Hostels</h4>
 						<div class = "userInputHostels">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni iste adipisci pariatur temporibus, numquam!</p>
@@ -136,6 +183,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="museums">
+						<div class="btnBoard btnBoardMuseums"><i class="fa fa-times"></i></div>
 						<h4>Museums</h4>
 						<div class = "userInputMuseums">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni iste adipisci pariatur temporibus, numquam!</p>
@@ -145,6 +193,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="pubs">
+						<div class="btnBoard btnBoardPubs"><i class="fa fa-times"></i></div>
 						<h4>Pubs</h4>
 						<div class = "userInputPubs">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni iste adipisci pariatur temporibus, numquam!</p>
@@ -154,7 +203,8 @@
 				</div>
 				<div class="col-md-4">
 					<div class="createOwn">
-						<h4>Add</h4>
+						<div class="btnBoard btnBoardCreateOwn"><i class="fa fa-times"></i></div>
+						<h4>Additional Notes</h4>
 						<textarea></textarea>
 					</div>
 				</div>
