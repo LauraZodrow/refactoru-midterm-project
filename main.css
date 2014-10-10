@@ -107,6 +107,7 @@ ul {
 
 .bookmarkBoard {
 	margin-top: 50px;
+	margin-bottom: 5%;
 }
 
 .schools,
@@ -132,16 +133,9 @@ ul {
 	display: none;
 }
 
-.timelineContainer {
-	display: none;
-	margin-top: 60px;
-	border-top: 1px #D8D8D8 solid;
-	padding: 10px;
-}
-
 .addBtnBoard {
 	border: #000;
-	background-color: #999;
+	background-color: #004B76;
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 16px;
@@ -152,8 +146,9 @@ ul {
 
 .addBtnBoardHeader {
 	margin-bottom: 0px;
+	border-bottom: #fff;
 	border: #000;
-	background-color: #999;
+	background-color: #004B76;
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 16px;
@@ -177,4 +172,47 @@ ul {
 	padding: 8px;
 }
 
+.btnViewAll,
+.btnAdd,
+.btnShare {
+	border: 1px solid #004B76;
+	border-radius: 3px;
+	background-color: #004B76;
+	width: 75px;
+	padding: 3px;
+	margin: 5px 0px;
+	text-align: center;
+	color: #E9E5DC;
+}
 
+.timelineLine {
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.timelineDetails textarea {
+	width: 100%;
+}
+
+
+.placeMarkerImageWrapper {
+	position:absolute;
+	top: 16px;
+	left: 100px;
+}
+
+.placeMarkerImage {
+	display: inline-block;
+	margin: 0px 10px;
+}
+
+.timelineDetailsName {
+	font-size: 17px;
+}
+
+.timelineDetailsText {
+	width: 400px;
+	font-size: 17px;
+	margin-bottom: 80px;
+}

@@ -148,42 +148,6 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
-
-
-// =================================================
-// My Library Button
-// =================================================
-
-// var Button = function(title) {
-// 	this.title = title;
-// }
-
-// Button.prototype.render = function() {
-// 	if(this.element) return this.element;
-
-// 	this.element = $('<div><h4>My Library</h4></div>');
-
-// 	this.element 
-// 		.addClass('btn-library')
-// 		.appendTo('body');
-
-// 	this.element.on('click', function () {
-// 		$('.my-library').slideDown(600);
-// 		$('.btn-library').hide();
-// 	});	
-
-// 	$('.my-library').on('click', 'h4', function() {
-// 		$('.my-library').slideUp(600);
-// 		$('.btn-library').show();
-// 	})
-
-// 	return this.element;
-// };
-
-// var btnLibrary = new Button('My Library');
-// btnLibrary.render();
-
-
 // =================================================
 // TravelLine - Timeline
 // =================================================
@@ -222,23 +186,45 @@ Location.prototype.render = function() {
 //When Marker is clicked Modal appears, asks to add to Timeline.
 //If say yes, place name will be added to timeline
 Location.prototype.markerclick = function(e) {
-	var placeName = this.marker.title;
-  // var locationDescription = $('.locationText').clone();
-
+  //THIS SHOWS MODAL TO 'ADD TO TIMELINE'
   $('#myModal').modal('show');
   $('.timelineContainer').show();
-
+  var location = this;
   $('.addButton').one('click', function () {
       $('#myModal').modal('hide');
 
+      var places = [];
 
-      // var printDate = date.getYear() + ' ' + date.getDate();
-      var locationText = ('<textarea></textarea>');
-      var locationName = ('<h4>' + placeName + '</h4>');
-      var locationBlock = ('<div class="locationContainer">' + locationName + locationText + '</div>');
+      //Object stores 'dot' marker information
+      var placeMarker = {
+        img: $("<div class='placeMarkerImage'><img src='./images/dot.png'></div>"),
+        name: location.marker.title,
+        description: $("<div class='timelineDetailsText'><textarea></textarea></div>")
+      };
 
+      places.push(placeMarker);
 
-      $('.timelineContainer').append(locationBlock);
+      var positioning = function () {
+        places.length * 100;
+      }
+      positioning(placeMarker.img);
+      console.log(positioning);
+
+      $('.timelineDetails').empty();
+
+      $('.placeMarkerImageWrapper').append(placeMarker.img);
+      $('.timelineDetails').append("<h4 class='timelineDetailsName'>" + placeMarker.name + "</h4>");
+      $('.timelineDetails').append(placeMarker.description);
+
+      placeMarker.img.click(function(){
+        $('.timelineDetails').empty();
+
+        $('.timelineDetails').append('<h4>' + placeMarker.name + '</h4>');
+        $('.timelineDetails').append(placeMarker.description);
+      })
+
+      console.log(placeMarker);
+      console.log(places);
   });
 
   console.log('clicked', this);
@@ -305,9 +291,6 @@ $(document).on('click', '.btnBoardCreateOwn', function(){
     $('.btnBoardCreateOwn').closest('.createOwn').hide();
 });
 
-var addBtnBoard = function() {
-
-}
 
 
 
