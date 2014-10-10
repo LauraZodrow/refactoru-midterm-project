@@ -1,0 +1,12 @@
+body {
+	background-image: url("./images/background-img.jpg");
+	max-width: 100%;
+}
+
+img {
+	width: 100%
+}
+
+.form-group {
+	width: 40%;
+}

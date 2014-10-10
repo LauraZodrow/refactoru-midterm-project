@@ -79,8 +79,8 @@ function initialize() {
 });
 
   var defaultBounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(-33.8902, 151.1759), 
-      new google.maps.LatLng(-33.8474, 151.2631)); 
+      new google.maps.LatLng(41.8620782, 12.1691666), 
+      new google.maps.LatLng(41.7990883, 12.9744211));
   map.fitBounds(defaultBounds);
 
   // Create the search box and link it to the UI element.
@@ -184,7 +184,7 @@ Location.prototype.render = function() {
 };
 
 //When Marker is clicked Modal appears, asks to add to Timeline.
-//If say yes, place name will be added to timeline
+//If say yes, place name, textarea, and marker will be added to timeline
 Location.prototype.markerclick = function(e) {
   //THIS SHOWS MODAL TO 'ADD TO TIMELINE'
   $('#myModal').modal('show');
@@ -204,20 +204,11 @@ Location.prototype.markerclick = function(e) {
 
       places.push(placeMarker);
 
-      var positioning = function () {
-        places.length * 100;
-      }
-      positioning(placeMarker.img);
-      console.log(positioning);
-
       $('.timelineDetails').empty();
 
       $('.placeMarkerImageWrapper').append(placeMarker.img);
       $('.timelineDetails').append("<h3 class='timelineDetailsName'>" + placeMarker.name + "</h3>");
       $('.timelineDetails').append(placeMarker.description);
-
-      $('.nextButton').show();
-      $('.prevButton').show();
 
       placeMarker.img.click(function(){
         $('.timelineDetails').empty();
@@ -226,12 +217,7 @@ Location.prototype.markerclick = function(e) {
         $('.timelineDetails').append(placeMarker.description);
 
       })
-
-      console.log(placeMarker);
-      console.log(places);
   });
-
-  console.log('clicked', this);
 };
 
 // =================================================
@@ -294,22 +280,4 @@ $(document).on('click', '.btnBoardPubs', function(){
 $(document).on('click', '.btnBoardCreateOwn', function(){
     $('.btnBoardCreateOwn').closest('.createOwn').hide();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
