@@ -76,7 +76,7 @@ function initialize() {
         ]
     }
 ]
-  });
+});
 
   var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(-33.8902, 151.1759), 
@@ -188,7 +188,7 @@ Location.prototype.render = function() {
 Location.prototype.markerclick = function(e) {
   //THIS SHOWS MODAL TO 'ADD TO TIMELINE'
   $('#myModal').modal('show');
-  $('.timelineContainer').show();
+
   var location = this;
   $('.addButton').one('click', function () {
       $('#myModal').modal('hide');
@@ -213,14 +213,18 @@ Location.prototype.markerclick = function(e) {
       $('.timelineDetails').empty();
 
       $('.placeMarkerImageWrapper').append(placeMarker.img);
-      $('.timelineDetails').append("<h4 class='timelineDetailsName'>" + placeMarker.name + "</h4>");
+      $('.timelineDetails').append("<h3 class='timelineDetailsName'>" + placeMarker.name + "</h3>");
       $('.timelineDetails').append(placeMarker.description);
+
+      $('.nextButton').show();
+      $('.prevButton').show();
 
       placeMarker.img.click(function(){
         $('.timelineDetails').empty();
 
-        $('.timelineDetails').append('<h4>' + placeMarker.name + '</h4>');
+        $('.timelineDetails').append('<h3>' + placeMarker.name + '</h3>');
         $('.timelineDetails').append(placeMarker.description);
+
       })
 
       console.log(placeMarker);

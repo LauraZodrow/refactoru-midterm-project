@@ -63,7 +63,9 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-md-10 col-md-offset-1 timelineDetails"></div>
+			<div class="col-md-7 col-md-offset-1 timelineDetails"></div>
+			<div class="col-md-2 nextButton"><img src="./images/prev.png"></div>
+			<div class="col-md-2 nextButton"><img src="./images/next.png"></div>
 		</div>
 
 
@@ -91,7 +93,60 @@
 		  </div>
 		</div>
 
-	
+
+		<!-- UPLOAD PHOTOS AND VIDEOS TO CITY PAGE -->
+		<div class = "libraryPhotoVideo row">
+			<div class="photoButtons col-md-1">
+				<div class="btnViewAll"><i class="fa fa-camera"></i>View All</div>
+				<div class="btnAdd"><i class="fa fa-plus"></i>Add</div>
+				<div class="btnShare"><i class="fa fa-share"></i>Share</div>
+			</div>
+
+			<div id="photoLibrary" class="col-md-5 carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				 <ol class="carousel-indicators">
+	    			<li data-target="#photoLibrary" data-slide-to="0" class="active"></li>
+	    			<li data-target="#photoLibrary" data-slide-to="1"></li>
+	    			<li data-target="#photoLibrary" data-slide-to="2"></li>
+	    			<li data-target="#photoLibrary" data-slide-to="3"></li>
+	   				<!-- <li data-target="#photoLibrary" data-slide-to="2"></li> -->
+	 			</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+			    	<div class="item active">
+			      		<img src="./images/rome0.jpg" alt="Venice, Italy">
+			    	</div>
+			    	<div class="item">
+			      		<img src="./images/rome1.jpg" alt="Venice">
+			   		</div>
+			   		<div class="item">
+			      		<img src="./images/rome2.jpg" alt="Venice">
+			   		</div>
+			   		<div class="item">
+			      		<img src="./images/rome3.jpg" alt="Venice">
+			   		</div>
+				</div>
+				<!-- Controls -->
+				<a class="left carousel-control" href="#photoLibrary" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#photoLibrary" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+			
+			<!-- Video Library -->
+			<div class="video col-md-5">
+				<img src="./images/video-image.png">	
+			</div>
+			<div class="videoButtons col-md-1">
+				<div class="btnViewAll"><i class="fa fa-video-camera"></i>View All</div>
+				<div class="btnAdd"><i class="fa fa-plus"></i>Add</div>
+				<div class="btnShare"><i class="fa fa-share"></i>Share</div>
+			</div>
+		</div>
+
 
 		<!-- CUSTOM SOCIAL BOARD -->
 		<div class="bookmarkBoard">
@@ -166,55 +221,6 @@
 						<textarea></textarea>
 					</div>
 				</div>
-			</div>
-		</div>
-
-		<!-- UPLOAD PHOTOS AND VIDEOS TO CITY PAGE -->
-		<div class = "row">
-			<div class="photoButtons col-md-1">
-				<div class="btnViewAll"><i class="fa fa-camera"></i>View All</div>
-				<div class="btnAdd"><i class="fa fa-plus"></i>Add</div>
-				<div class="btnShare"><i class="fa fa-share"></i>Share</div>
-			</div>
-
-			<div id="photoLibrary" class="col-md-5 carousel slide" data-ride="carousel">
-				<!-- Indicators -->
-				 <ol class="carousel-indicators">
-	    			<li data-target="#photoLibrary" data-slide-to="0" class="active"></li>
-	    			<li data-target="#photoLibrary" data-slide-to="1"></li>
-	    			<li data-target="#photoLibrary" data-slide-to="2"></li>
-	   				<!-- <li data-target="#photoLibrary" data-slide-to="2"></li> -->
-	 			</ol>
-
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner">
-			    	<div class="item active">
-			      		<img src="./images/rome0.jpg" alt="Venice, Italy">
-			    	</div>
-			    	<div class="item">
-			      		<img src="./images/rome1.jpg" alt="Venice">
-			   		</div>
-			   		<div class="item">
-			      		<img src="./images/rome2.jpg" alt="Venice">
-			   		</div>
-				</div>
-				<!-- Controls -->
-				<a class="left carousel-control" href="#photoLibrary" role="button" data-slide="prev">
-				    <span class="glyphicon glyphicon-chevron-left"></span>
-				</a>
-				<a class="right carousel-control" href="#photoLibrary" role="button" data-slide="next">
-				    <span class="glyphicon glyphicon-chevron-right"></span>
-				</a>
-			</div>
-			
-			<!-- Video Library -->
-			<div class="video col-md-5">
-				<img src="./images/video-image.jpg">	
-			</div>
-			<div class="videoButtons col-md-1">
-				<div class="btnViewAll"><i class="fa fa-video-camera"></i>View All</div>
-				<div class="btnAdd">Add</div>
-				<div class="btnShare"><i class="fa fa-share"></i>Share</div>
 			</div>
 		</div>
 	</div>

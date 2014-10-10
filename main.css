@@ -3,10 +3,16 @@
 	width: 40%;
 }
 
+.trending-now {
+	border-right: 2px solid #666;
+	padding-top: 5px;
+	height: 100%;
+}
+
 /*Google Map Css*/
 #map-canvas { 
 	width: 100%;
-	height: 400px; 
+	height: 450px; 
 	margin: 0; 
 	padding: 0;
 }
@@ -84,25 +90,11 @@ img {
 	text-align: center
 }
 
-.google-map {
-	margin: auto;
-	text-align: center;
-	margin-top: 41px;
-}
 
-.trending-now {
-	border-right: 2px solid #666;
-	padding-top: 5px;
-	height: 100%;
-}
-
-ul {
-	list-style: none;
-	text-decoration: none;
-}
-
-.timeline {
-	margin-bottom: 50px;
+.prevButton,
+.nextButton {
+	display: none;
+	margin-top: 3%;
 }
 
 .bookmarkBoard {
@@ -123,6 +115,9 @@ ul {
 	box-shadow: 8px 8px 5px #D8D8D8;
 }
 
+.libraryPhotoVideo {
+	margin-top: 5%;
+}
 .photoButtons,
 .videoButtons {
 	font-size: 12px;
@@ -207,12 +202,9 @@ ul {
 	margin: 0px 10px;
 }
 
-.timelineDetailsName {
-	font-size: 17px;
-}
-
 .timelineDetailsText {
-	width: 400px;
+	width: 500px;
+	height: 20%;
 	font-size: 17px;
 	margin-bottom: 80px;
 }
